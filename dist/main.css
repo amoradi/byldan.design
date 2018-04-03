@@ -15,13 +15,12 @@ body {
   font-size: 24px;
   background: #1b1464;
   color: #fff;
-  padding: 1rem 2rem;
+  padding: 2rem;
   letter-spacing: 1px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
 .PageWrapper {
-  max-width: 1280px;
   margin: 0 auto; }
 
 .Link {
@@ -32,7 +31,7 @@ body {
   color: #fff;
   display: flex;
   align-items: center;
-  letter-spacing: 1px; }
+  letter-spacing: 0; }
   .Logo:hover {
     cursor: pointer; }
   .Logo:link, .Logo:visited, .Logo:hover, .Logo:active {
@@ -65,6 +64,8 @@ body {
   justify-content: space-between;
   align-items: center;
   opacity: 0;
+  padding-bottom: 2.5rem;
+  border-bottom: 2px #1503af solid;
   -webkit-animation: fadein 1s 5s forwards;
   /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 1s 5s forwards;
@@ -109,6 +110,18 @@ body {
   to {
     opacity: 1; } }
 
+.Footer {
+  background: #111;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2rem; }
+  .Footer-body {
+    max-width: 1280px;
+    margin: 0 auto; }
+
 .Slide {
   padding: 3rem 0; }
 
@@ -118,7 +131,8 @@ body {
   .Slide--home svg {
     margin-top: 7rem;
     max-width: 600px;
-    max-height: 400px; }
+    max-height: 400px;
+    width: 100%; }
   .Slide--home .Slide-body {
     color: #ff7bac; }
   .Slide--home .Slide-emphasis {
