@@ -1,0 +1,22 @@
+.Logo {
+  font-family: $alternative-font-family;
+  color: $white; 
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:link, 
+  &:visited, 
+  &:hover,
+  &:active {
+    color: $white;
+  }
+
+  &-item {
+    padding-right: 0.5rem;
+  } 
+}

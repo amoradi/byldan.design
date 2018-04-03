@@ -1,0 +1,18 @@
+.Slide--home {
+  text-align: center;
+  font-size: $medium-font-size;
+
+  svg {
+    margin-top: 7rem;
+    max-width: 600px;
+    max-height: 400px;
+  }
+
+  & .Slide-body {
+    color: $pink;
+  }
+
+  & .Slide-emphasis {
+    color: $red;
+  }
+}

@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'Circular Std Book';
+  src: url("/assets/fonts/CircularStd-Book.woff2") format("woff2"), url("/assets/fonts/CircularStd-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Circular Std';
+  src: url("/assets/fonts/CircularStd-Medium.woff2") format("woff2"), url("/assets/fonts/CircularStd-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+body {
+  font-family: "Circular Std Book";
+  font-size: 24px;
+  background: #1b1464;
+  color: #fff;
+  padding: 1rem 2rem;
+  letter-spacing: 1px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.PageWrapper {
+  max-width: 1280px;
+  margin: 0 auto; }
+
+.Link {
+  text-decoration: underline; }
+
+.Logo {
+  font-family: "Circular Std";
+  color: #fff;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px; }
+  .Logo:hover {
+    cursor: pointer; }
+  .Logo:link, .Logo:visited, .Logo:hover, .Logo:active {
+    color: #fff; }
+  .Logo-item {
+    padding-right: 0.5rem; }
+
+.NavLink {
+  color: #fff;
+  display: inline-block;
+  font-size: 20px;
+  margin-left: 3rem; }
+  .NavLink:hover {
+    cursor: pointer; }
+  .NavLink:link, .NavLink:visited, .NavLink:hover, .NavLink:active {
+    color: #fff; }
+  .NavLink:after {
+    display: block;
+    content: '';
+    border-bottom: solid 2px #fff;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    position: relative;
+    top: 0.25rem; }
+  .NavLink:hover:after {
+    transform: scaleX(1); }
+
+.NavigationBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.Slide {
+  padding: 3rem 0; }
+
+.Slide--home {
+  text-align: center;
+  font-size: 36px; }
+  .Slide--home svg {
+    margin-top: 7rem;
+    max-width: 600px;
+    max-height: 400px; }
+  .Slide--home .Slide-body {
+    color: #ff7bac; }
+  .Slide--home .Slide-emphasis {
+    color: #ff0000; }
