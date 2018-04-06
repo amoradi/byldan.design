@@ -1,8 +1,27 @@
 doctype
 html(lang="en")
+  script(src='../assets/scripts/confetti.min.js')
   include ../partials/head
 
   body
+    canvas#Confetti
+    script.
+      function releaseConfetti() {
+        var confettiSettings = { 
+          target: 'Confetti',
+          size: 4,
+          animate: true,
+          props: ['square', 'triangle'],
+          colors: [[255,0,0],[0, 255, 255],[255, 123, 172], [102, 51, 153], [255, 255, 255]]
+        };
+        var confetti = new window.ConfettiGenerator(confettiSettings);
+        setTimeout(function() { 
+          document.querySelector('#Confetti').setAttribute('class', 'is-active');
+          confetti.render();
+        }, 4500);
+      }
+
+      window.onload = releaseConfetti;
     div.PageWrapper
       include ../partials/navigation_bar
       div(class='Slide Slide--home')

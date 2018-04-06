@@ -1,4 +1,19 @@
-<!DOCTYPE html><html lang="en"><head><title>byldan - a pioneering design group</title><link href="main.css" rel="stylesheet"></head><body><div class="PageWrapper"><nav class="NavigationBar"><a class="Logo"><img class="Logo-item" src="assets/images/byldan-logo.png" alt="byldan">byldan</a><div><a class="NavLink">about</a><a class="NavLink">services</a><a class="NavLink">contact</a></div></nav><div class="Slide Slide--home"><!--?xml version="1.0" encoding="utf-8"?-->
+<!DOCTYPE html><html lang="en"><script src="../assets/scripts/confetti.min.js"></script><head><title>byldan - a pioneering design group</title><link href="main.css" rel="stylesheet"></head><body><canvas id="Confetti"></canvas><script>function releaseConfetti() {
+  var confettiSettings = { 
+    target: 'Confetti',
+    size: 4,
+    animate: true,
+    props: ['square', 'triangle'],
+    colors: [[255,0,0],[0, 255, 255],[255, 123, 172], [102, 51, 153], [255, 255, 255]]
+  };
+  var confetti = new window.ConfettiGenerator(confettiSettings);
+  setTimeout(function() { 
+    document.querySelector('#Confetti').setAttribute('class', 'is-active');
+    confetti.render();
+  }, 4500);
+}
+
+window.onload = releaseConfetti;</script><div class="PageWrapper"><nav class="NavigationBar"><a class="Logo"><img class="Logo-item" src="assets/images/byldan-logo.png" alt="byldan">byldan</a><div><a class="NavLink">about</a><a class="NavLink">services</a><a class="NavLink">contact</a></div></nav><div class="Slide Slide--home"><!--?xml version="1.0" encoding="utf-8"?-->
 <!-- Generator: Adobe Illustrator 14.0.0, SVG Export Plug-In  -->
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="1084px" height="526px" viewBox="-13.4 -16.1 1084 526" enable-background="new -13.4 -16.1 1084 526" xml:space="preserve" style="">
