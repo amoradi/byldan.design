@@ -5,15 +5,18 @@ html(lang="en")
     canvas#Confetti
     div.PageWrapper
       include ../partials/navigation_bar
-      
+      div.SlideCount
+      div.MouseIcon
+        include ../../assets/images/mouse.svg
       div(id="fullpage")
-        div(class='Slide Slide--home section')
-          include ../../assets/images/byldan-handwritten_animated.svg
-          div.Slide-body
-            span.Slide-bodyContent
-        div.section
+        div(class="section Slide")
+          div(class='Slide--home')
+            include ../../assets/images/byldan-handwritten_animated.svg
+            div.Slide-body
+              span.Slide-bodyContent
+        div(class="section Slide")
           | stage 2
-        div.section
+        div(class="section Slide")
           | stage 3
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
     script(src='../assets/scripts/jquery.easings.min.js')
@@ -26,5 +29,21 @@ html(lang="en")
 
     script.
       $(document).ready(function() {
-        $('#fullpage').fullpage();
+        $('#fullpage').fullpage({
+          anchors:['1', '2', '3'],
+          onLeave: function(index, nextIndex) {
+            if(index === 1) {
+              $('body').addClass('has-left-1').removeClass('enter-1');
+            }
+
+            if(nextIndex === 1) {
+              $('body').removeClass('has-left-1').addClass('enter-1');
+            }
+
+            $('.SlideCount').html(nextIndex + ' / 5');
+          }
+        });
       });
+
+
+

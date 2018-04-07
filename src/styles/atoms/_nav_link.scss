@@ -2,6 +2,7 @@
   color: $white;
   display: inline-block;
   font-size: $small-font-size;
+  text-decoration: none;
 
   &:hover {
     cursor: pointer;
@@ -11,6 +12,7 @@
   &:visited, 
   &:hover,
   &:active {
+    text-decoration: none;
     color: $white;
   }
 
@@ -26,7 +28,10 @@
     top: 0.25rem;
   }
 
-  &:hover:after {
+  &:hover:after,
+  .fp-viewing-2 &[href="#2"]:after,
+  .fp-viewing-3 &[href="#3"]:after,
+  .fp-viewing-4 &[href="#4"]:after  {
     transform: scaleX(1);
   }
 }

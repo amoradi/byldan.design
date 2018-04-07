@@ -1,0 +1,35 @@
+.MouseIcon {
+  position: fixed;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  animation: fadeIn 0.2s 5s forwards;
+
+  &-content {
+    fill: $white;
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    transition: opacity 0.6s ease;
+  }
+
+  &-wheel {
+    animation: bounceY 1s infinite ease;
+  }
+}
+
+.fp-viewing-2 .MouseIcon-content,
+.fp-viewing-3 .MouseIcon-content,
+.fp-viewing-4 .MouseIcon-content {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+@keyframes bounceY {
+  0% { transform: translateY(0); }
+  20% { transform:translateY(-2px); }
+}
