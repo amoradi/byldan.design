@@ -1,19 +1,4 @@
-<!DOCTYPE html><html lang="en"><script src="../assets/scripts/confetti.min.js"></script><head><title>byldan - a pioneering design group</title><link href="main.css" rel="stylesheet"></head><body><canvas id="Confetti"></canvas><script>function releaseConfetti() {
-  var confettiSettings = { 
-    target: 'Confetti',
-    size: 4,
-    animate: true,
-    props: ['square', 'triangle'],
-    colors: [[255,0,0],[0, 255, 255],[255, 123, 172], [102, 51, 153], [255, 255, 255]]
-  };
-  var confetti = new window.ConfettiGenerator(confettiSettings);
-  setTimeout(function() { 
-    document.querySelector('#Confetti').setAttribute('class', 'is-active');
-    confetti.render();
-  }, 4500);
-}
-
-window.onload = releaseConfetti;</script><div class="PageWrapper"><nav class="NavigationBar"><a class="Logo"><img class="Logo-item" src="assets/images/byldan-logo.png" alt="byldan">byldan</a><div><a class="NavLink">about</a><a class="NavLink">services</a><a class="NavLink">contact</a></div></nav><div class="Slide Slide--home"><!--?xml version="1.0" encoding="utf-8"?-->
+<!DOCTYPE html><html lang="en"><head><title>byldan - a pioneering design group</title><link href="main.css" rel="stylesheet"><script src="../assets/scripts/pace.min.js"></script></head><body><canvas id="Confetti"></canvas><div class="PageWrapper"><nav class="NavigationBar"><a class="Logo"><img class="Logo-item" src="assets/images/byldan-logo.png" alt="byldan">byldan</a><div><a class="NavLink">about</a><a class="NavLink">services</a><a class="NavLink">contact</a></div></nav><div id="fullpage"><div class="Slide Slide--home section"><!--?xml version="1.0" encoding="utf-8"?-->
 <!-- Generator: Adobe Illustrator 14.0.0, SVG Export Plug-In  -->
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="1084px" height="526px" viewBox="-13.4 -16.1 1084 526" enable-background="new -13.4 -16.1 1084 526" xml:space="preserve" style="">
@@ -34,4 +19,6 @@ c-7.3,27.9-3.4,62.6-3.4,91.1c-0.1,24.8-1,119.4-49,112.2c-14.1-2.1-37.7-38.9-38-5
 	c17.3-1.5,28.2,36.9,32.5,49.3c5.2-19.7-1.6-38.8,16.6-54.2c37.2-31.4,69.4,23.1,75,54.1c7.1,39.2-5.1,81.9,17.8,117.6
 	c9.9,15.5,25.4,30.5,45.1,28.2" class="RESuwmwE_5"></path>
 <style data-made-with="vivus-instant">.RESuwmwE_0{stroke-dasharray:625 627;stroke-dashoffset:626;animation:RESuwmwE_draw 575ms ease-in-out 0ms forwards;}.RESuwmwE_1{stroke-dasharray:829 831;stroke-dashoffset:830;animation:RESuwmwE_draw 763ms ease-in-out 575ms forwards;}.RESuwmwE_2{stroke-dasharray:382 384;stroke-dashoffset:383;animation:RESuwmwE_draw 352ms ease-in-out 1339ms forwards;}.RESuwmwE_3{stroke-dasharray:566 568;stroke-dashoffset:567;animation:RESuwmwE_draw 521ms ease-in-out 1691ms forwards;}.RESuwmwE_4{stroke-dasharray:313 315;stroke-dashoffset:314;animation:RESuwmwE_draw 288ms ease-in-out 2212ms forwards;}.RESuwmwE_5{stroke-dasharray:541 543;stroke-dashoffset:542;animation:RESuwmwE_draw 498ms ease-in-out 2501ms forwards;}@keyframes RESuwmwE_draw{100%{stroke-dashoffset:0;}}@keyframes RESuwmwE_fade{0%{stroke-opacity:1;}94.44444444444444%{stroke-opacity:1;}100%{stroke-opacity:0;}}</style></svg>
-<div class="Slide-body"><span class="Slide-bodyContent"></span></div></div></div><script src="../assets/scripts/typed.min.js"></script><script src="../assets/scripts/main.js"></script></body></html>
+<div class="Slide-body"><span class="Slide-bodyContent"></span></div></div><div class="section">stage 2</div><div class="section">stage 3</div></div></div><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script><script src="../assets/scripts/jquery.easings.min.js"></script><script src="../assets/scripts/scrolloverflow.min.js"></script><script src="../assets/scripts/jquery.fullPage.js"></script><script src="../assets/scripts/typed.min.js"></script><script src="../assets/scripts/confetti.min.js"></script><script src="../assets/scripts/main.js"></script><script>$(document).ready(function() {
+  $('#fullpage').fullpage();
+});</script></body></html>

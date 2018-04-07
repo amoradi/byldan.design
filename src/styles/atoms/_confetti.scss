@@ -6,10 +6,10 @@
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  animation: fadeIn 0.2s 5s forwards;
 }
 
-#Confetti.is-active {
-  transition: opacity 1s ease-in-out;
-  opacity: 1;
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
