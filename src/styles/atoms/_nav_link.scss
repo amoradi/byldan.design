@@ -31,7 +31,8 @@
   &:hover:after,
   .fp-viewing-2 &[href="#2"]:after,
   .fp-viewing-3 &[href="#3"]:after,
-  .fp-viewing-4 &[href="#4"]:after  {
+  .fp-viewing-4 &[href="#4"]:after,
+  .fp-viewing-5 &[href="#5"]:after  {
     transform: scaleX(1);
   }
 }

@@ -18,6 +18,17 @@ html(lang="en")
           | stage 2
         div(class="section Slide")
           | stage 3
+        div(class="section Slide")
+          p.u-red.u-large-font
+            | we deliver dynomite design #[br] to communicate fact, fiction and fancy
+            
+          p.u-pink
+            | for artistics, educationalists, gastronomes,
+            | #[br] capitalists, melody makers, happenings & others
+          
+          p #[br]#[br] created circa 2018, by aaron moradi
+        div(class="section Slide")
+          | contact
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
     script(src='../assets/scripts/jquery.easings.min.js')
     script(src='../assets/scripts/scrolloverflow.min.js')
@@ -30,7 +41,7 @@ html(lang="en")
     script.
       $(document).ready(function() {
         $('#fullpage').fullpage({
-          anchors:['1', '2', '3'],
+          anchors:['1', '2', '3', '4', '5'],
           onLeave: function(index, nextIndex) {
             if(index === 1) {
               $('body').addClass('has-left-1').removeClass('enter-1');

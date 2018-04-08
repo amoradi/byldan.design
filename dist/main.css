@@ -317,6 +317,18 @@ html.fp-enabled,
   to {
     opacity: 0; } }
 
+.u-red {
+  color: #ff0000; }
+
+.u-pink {
+  color: #ff7bac; }
+
+.u-medium-font {
+  font-size: 36px; }
+
+.u-large-font {
+  font-size: 42px; }
+
 body {
   font-family: "Circular Std Book";
   font-size: 24px;
@@ -378,7 +390,8 @@ body {
   .NavLink:hover:after,
   .fp-viewing-2 .NavLink[href="#2"]:after,
   .fp-viewing-3 .NavLink[href="#3"]:after,
-  .fp-viewing-4 .NavLink[href="#4"]:after {
+  .fp-viewing-4 .NavLink[href="#4"]:after,
+  .fp-viewing-5 .NavLink[href="#5"]:after {
     transform: scaleX(1); }
 
 #Confetti {
@@ -495,4 +508,10 @@ body {
   background: #111; }
 
 .Slide[data-anchor="3"] {
+  background: #1503af; }
+
+.Slide[data-anchor="4"] {
+  background: #1b1464; }
+
+.Slide[data-anchor="5"] {
   background: #1503af; }
