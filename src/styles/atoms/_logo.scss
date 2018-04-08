@@ -5,6 +5,8 @@
   align-items: center;
   letter-spacing: 0;
   text-decoration: none;
+  opacity: 0;
+  animation: fadein .6s 1.25s forwards;
 
   &:hover {
     text-decoration: none;

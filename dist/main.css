@@ -329,6 +329,15 @@ html.fp-enabled,
 .u-large-font {
   font-size: 42px; }
 
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span,
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  border-radius: 0;
+  background-color: #fff; }
+
+#fp-nav {
+  opacity: 0;
+  animation: fadeIn 0.6s 1.75s forwards; }
+
 body {
   font-family: "Circular Std Book";
   font-size: 24px;
@@ -338,13 +347,14 @@ body {
   letter-spacing: 1px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  animation: colorRush 3s 5s forwards; }
+  background: linear-gradient(to top right, #1b1464 0%, #1503af 100%);
+  /* animation: colorRush 3s 5s forwards; */ }
 
 @keyframes colorRush {
   0% {
     background: #1503af; }
   100% {
-    background: #1b1464; } }
+    background: linear-gradient(to top right, #1b1464 0%, #1503af 100%); } }
 
 .PageWrapper {
   margin: 0 auto;
@@ -359,7 +369,9 @@ body {
   display: flex;
   align-items: center;
   letter-spacing: 0;
-  text-decoration: none; }
+  text-decoration: none;
+  opacity: 0;
+  animation: fadein .6s 1.25s forwards; }
   .Logo:hover {
     text-decoration: none;
     cursor: pointer; }
@@ -379,14 +391,22 @@ body {
   .NavLink:link, .NavLink:visited, .NavLink:hover, .NavLink:active {
     text-decoration: none;
     color: #fff; }
+  .NavLink-holder {
+    z-index: 2;
+    position: relative; }
   .NavLink:after {
     display: block;
     content: '';
-    border-bottom: solid 2px #fff;
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
     position: relative;
-    top: 0.25rem; }
+    top: -0.6rem;
+    z-index: 1;
+    width: 104%;
+    left: -2%;
+    background: #cc0303;
+    background: linear-gradient(to bottom left, #ff7bac 0%, #cc0303 100%);
+    height: 8px; }
   .NavLink:hover:after,
   .fp-viewing-2 .NavLink[href="#2"]:after,
   .fp-viewing-3 .NavLink[href="#3"]:after,
@@ -413,7 +433,7 @@ body {
   z-index: 2;
   opacity: 0;
   transition: opacity 0.6s ease;
-  animation: fadeIn 0.2s 5s forwards; }
+  animation: fadeIn 0.6s 2s forwards; }
   .MouseIcon-content {
     fill: #fff;
     width: 40px;
@@ -425,7 +445,8 @@ body {
 
 .fp-viewing-2 .MouseIcon-content,
 .fp-viewing-3 .MouseIcon-content,
-.fp-viewing-4 .MouseIcon-content {
+.fp-viewing-4 .MouseIcon-content,
+.fp-viewing-5 .MouseIcon-content {
   opacity: 0;
   transition: opacity 0.6s ease; }
 
@@ -441,7 +462,9 @@ body {
   bottom: 2rem;
   color: #fff;
   font-size: 18px;
-  z-index: 2; }
+  z-index: 2;
+  opacity: 0;
+  animation: fadein .6s 2.25s forwards; }
 
 .NavigationBar {
   display: flex;
@@ -452,23 +475,19 @@ body {
   width: calc(100% - 4rem);
   top: 2rem;
   left: 2rem;
-  opacity: 0;
   z-index: 0;
   transition: border-bottom-color 0.2s ease; }
-
-.has-left-1 .NavigationBar {
-  -webkit-animation: fadein .2s forwards;
-  /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein .2s forwards;
-  /* Firefox < 16 */
-  -ms-animation: fadein .2s forwards;
-  /* Internet Explorer */
-  -o-animation: fadein .2s forwards;
-  /* Opera < 12.1 */
-  animation: fadein .2s forwards; }
-
-.enter-1 .NavigationBar {
-  animation: fadeOut .2s forwards; }
+  .NavigationBar-content {
+    opacity: 0;
+    -webkit-animation: fadein .6s 1.5s forwards;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein .6s 1.5s forwards;
+    /* Firefox < 16 */
+    -ms-animation: fadein .6s 1.5s forwards;
+    /* Internet Explorer */
+    -o-animation: fadein .6s 1.5s forwards;
+    /* Opera < 12.1 */
+    animation: fadein .6s 1.5s forwards; }
 
 .Footer {
   background: #111;
@@ -484,6 +503,9 @@ body {
 
 .Slide {
   text-align: center; }
+  .Slide-intro {
+    opacity: 0;
+    animation: fadeIn 0.6s 0.25s forwards; }
 
 .Slide--home {
   text-align: center;
@@ -508,10 +530,13 @@ body {
   background: #111; }
 
 .Slide[data-anchor="3"] {
-  background: #1503af; }
+  background: #1503af;
+  background: linear-gradient(to bottom left, #1b1464 0%, #1503af 100%); }
 
 .Slide[data-anchor="4"] {
-  background: #1b1464; }
+  background: #1b1464;
+  background: linear-gradient(to bottom left, #1503af 0%, #1b1464 100%); }
 
-.Slide[data-anchor="5"] {
-  background: #1503af; }
+.Slide[data-anchor="4"] {
+  background: #21004c;
+  background: linear-gradient(to bottom left, #4601a5 0%, #21004c 100%); }

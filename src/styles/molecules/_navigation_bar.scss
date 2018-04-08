@@ -7,17 +7,15 @@
   width: calc(100% - 4rem);
   top: 2rem;
   left: 2rem;
-  opacity: 0;
   z-index: 0;
   transition: border-bottom-color 0.2s ease;
-}
 
-.has-left-1 .NavigationBar {
-  -webkit-animation: fadein .2s forwards; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein .2s forwards; /* Firefox < 16 */
-        -ms-animation: fadein .2s forwards; /* Internet Explorer */
-         -o-animation: fadein .2s forwards; /* Opera < 12.1 */
-            animation: fadein .2s forwards;
+  &-content {
+    opacity: 0;
+    -webkit-animation: fadein .6s 1.5s forwards; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein .6s 1.5s forwards; /* Firefox < 16 */
+    -ms-animation: fadein .6s 1.5s forwards; /* Internet Explorer */
+    -o-animation: fadein .6s 1.5s forwards; /* Opera < 12.1 */
+    animation: fadein .6s 1.5s forwards;
+  }
 }
-
-.enter-1 .NavigationBar { animation: fadeOut .2s forwards; }

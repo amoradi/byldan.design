@@ -1,5 +1,6 @@
 .Slide[data-anchor="4"] {
   background: $blue;
+  background: linear-gradient(to bottom left, $true-blue 0%, $blue 100%);
 }
 
 .Slide--about {

@@ -7,10 +7,11 @@ body {
   letter-spacing: 1px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  animation: colorRush 3s 5s forwards;
+  background: linear-gradient(to top right, $blue 0%, $true-blue 100%);
+  /* animation: colorRush 3s 5s forwards; */
 }
 
 @keyframes colorRush {
   0% { background: $true-blue; }
-  100% { background: $blue; }
+  100% { background: linear-gradient(to top right, $blue 0%, $true-blue 100%); }
 }

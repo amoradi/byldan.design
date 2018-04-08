@@ -1,5 +1,6 @@
-.Slide[data-anchor="5"] {
-  background: $true-blue;
+.Slide[data-anchor="4"] {
+  background: $dark-purple;
+  background: linear-gradient(to bottom left, $purple 0%, $dark-purple 100%);
 }
 
 .Slide--contact {

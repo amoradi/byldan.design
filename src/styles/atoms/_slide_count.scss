@@ -5,4 +5,6 @@
   color: $white;
   font-size: $smaller-font-size;
   z-index: 2;
+  opacity: 0;
+  animation: fadein .6s 2.25s forwards;
 }

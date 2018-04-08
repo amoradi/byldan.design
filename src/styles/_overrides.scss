@@ -1,0 +1,10 @@
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span,
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  border-radius: 0;
+  background-color: $white;  
+}
+
+#fp-nav {
+  opacity: 0;
+  animation: fadeIn 0.6s 1.75s forwards;
+}

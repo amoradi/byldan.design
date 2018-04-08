@@ -1,11 +1,21 @@
+var homeCopy = `<p class='u-red u-large-font'>
+      we deliver dynomite design <br /> to communicate fact, fiction and fancy
+    </p>     
+    <p class='u-pink'>
+      for artistics, educationalists, gastronomes,
+      <br /> capitalists, melody makers, happenings & others
+    </p>      
+    <p>created circa 2018, by aaron moradi</p>
+`;
+
 var options = {
-  strings: ["a <span class='Slide-emphasis'>pioneering</span> design group"],
+  strings: [homeCopy],
   typeSpeed: 40,
   startDelay: 3200,
   showCursor: false
 }
 
-var typed = new Typed(".Slide-bodyContent", options);
+//var typed = new Typed(".is-moving-text", options);
 
 window.requestTimeout = function(fn, delay) {
   if( !window.requestAnimationFrame       && 
@@ -63,4 +73,4 @@ function releaseConfetti() {
   // }, 6000);
 }
 
-window.onload = releaseConfetti;
+//window.onload = releaseConfetti;
