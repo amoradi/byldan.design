@@ -475,7 +475,7 @@ body {
   width: calc(100% - 4rem);
   top: 2rem;
   left: 2rem;
-  z-index: 0;
+  z-index: 1;
   transition: border-bottom-color 0.2s ease; }
   .NavigationBar-content {
     opacity: 0;
