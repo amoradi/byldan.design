@@ -4,18 +4,18 @@
   align-items: center;
   padding-bottom: 2.5rem;
   position: fixed;
-  width: calc(100% - 4rem);
-  top: 2rem;
+  width: calc(100% - 8rem);
+  top: 4rem;
   left: 2rem;
   z-index: 1;
   transition: border-bottom-color 0.2s ease;
 
   &-content {
     opacity: 0;
-    -webkit-animation: fadein .6s 1.5s forwards; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein .6s 1.5s forwards; /* Firefox < 16 */
-    -ms-animation: fadein .6s 1.5s forwards; /* Internet Explorer */
-    -o-animation: fadein .6s 1.5s forwards; /* Opera < 12.1 */
-    animation: fadein .6s 1.5s forwards;
+    -webkit-animation: fadein .6s 3.5s forwards; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein .6s 3.5s forwards; /* Firefox < 16 */
+    -ms-animation: fadein .6s 3.5s forwards; /* Internet Explorer */
+    -o-animation: fadein .6s 3.5s forwards; /* Opera < 12.1 */
+    animation: fadein .6s 3.5s forwards;
   }
 }

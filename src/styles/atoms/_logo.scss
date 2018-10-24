@@ -6,7 +6,7 @@
   letter-spacing: 0;
   text-decoration: none;
   opacity: 0;
-  animation: fadein .6s 1.25s forwards;
+  animation: fadein .6s 3.25s forwards;
 
   &:hover {
     text-decoration: none;
@@ -22,5 +22,6 @@
 
   &-item {
     padding-right: 0.5rem;
+    height: 30px;
   } 
 }

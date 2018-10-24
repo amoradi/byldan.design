@@ -1,10 +1,24 @@
 #fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span,
-#fp-nav ul li a span, .fp-slidesNav ul li a span {
+#fp-nav ul li a span, .fp-slidesNav ul li a span,
+#fp-nav ul li:hover a span, .fp-slidesNav ul li:hover a span {
+  background-color: $white; 
   border-radius: 0;
-  background-color: $white;  
+  height: 1px;
+  width: 18px; 
+  margin: 0;
+  left: 0;
+  top: 0;
 }
 
 #fp-nav {
   opacity: 0;
-  animation: fadeIn 0.6s 1.75s forwards;
+  animation: fadeIn 0.6s 3.75s forwards;
+}
+
+#fp-nav.right { right: 2rem; }
+
+
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span,
+#fp-nav ul li:hover a span, .fp-slidesNav ul li:hover a span {
+  height: 3px;
 }

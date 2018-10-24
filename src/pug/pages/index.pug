@@ -6,18 +6,18 @@ html(lang="en")
     div.PageWrapper
       include ../partials/navigation_bar
       div.SlideCount
-        | 1 / 5
+        | 01 / 04
       div.MouseIcon
         include ../../assets/images/mouse.svg
       div(id="fullpage")
         div(class="section Slide")
           div.Slide-intro
-            p.u-red.u-large-font
-              | we deliver dynomite design #[br] to communicate fact, fiction and fancy
-            p.u-pink
-              | for artistics, educationalists, gastronomes,
-              | #[br] capitalists, melody makers, happenings & others
-            p #[br]#[br] created circa 2018, by aaron moradi
+            canvas(class="SineWaves", width="100%")
+            p.u-red.u-xlarge-font.u-pt-o
+              | Hello, I'm Aaron. I design for:
+            p.u-pink.u-large-font
+              | artistics, gastronomes, capitalists,
+              | #[br]melody makers, happenings & others
         div(class="section Slide")
           | stage 2
         div(class="section Slide")
@@ -37,7 +37,7 @@ html(lang="en")
       $(document).ready(function() {
         $('#fullpage').fullpage({
           anchors:['1', '2', '3', '4', '5'],
-          navigation: true,
+          navigation: false,
           onLeave: function(index, nextIndex) {
             if(index === 1) {
               $('body').addClass('has-left-1').removeClass('enter-1');
@@ -47,10 +47,143 @@ html(lang="en")
               $('body').removeClass('has-left-1').addClass('enter-1');
             }
 
-            $('.SlideCount').html(nextIndex + ' / 4');
+            $('.SlideCount').html('0' + nextIndex + ' / 04');
           }
         });
       });
+
+      var c = document.querySelector(".SineWaves");
+      var ctx = c.getContext("2d");
+      
+      //var c = document.getElementById("c");
+      //var ctx = c.getContext("2d");
+      var cw = c.width = 400;
+      var ch = c.height = 250;
+
+      //ctx.fillStyle = "#FF0000";
+      
+      var cx = cw / 2,
+        cy = ch / 2;
+      var rad = Math.PI / 180;
+      var w = 400;
+      var h = 200;
+      var amplitude = h;
+      var amplitude2 = 100;
+      var frequency = .01;
+      var phi = 0;
+      var frames = 0;
+      var stopped = true;
+      //ctx.strokeStyle = "Cornsilk";
+      ctx.lineWidth = 4;
+
+      var colors = ["#1b1464", "rgb(21, 3, 175)", "#00ffff", "#ff0000", "#ff7bac", "#4601a5" ];
+
+      /*
+        $blue: #1b1464;
+        $true-blue: rgb(21, 3, 175);
+        $turquoise: #00ffff;
+        $red: #ff0000;
+        $pink: #ff7bac;
+        $dark-purple: #2d0167;
+        $purple: #4601a5;
+      */
+
+      function Draw() {
+        frames++
+        phi = frames / 60;
+        ctx.globalAlpha = 0.2;
+
+        ctx.clearRect(0, 0, cw, ch);
+
+        // - third
+        ctx.beginPath();
+        ctx.strokeStyle = colors[1];
+        ctx.fillStyle = colors[1];
+        ctx.moveTo(0, ch);
+
+        for (var x = 0; x < w; x++) {
+          y = Math.sin(x * frequency + phi) * amplitude / 4 + amplitude / 3;
+          //y = Math.cos(x * frequency + phi) * amplitude2 / 4 + amplitude2 / 2;
+          ctx.lineTo(x, y - 80); // 40 = offset
+        }
+        
+        ctx.lineTo(w, ch);
+        ctx.lineTo(0, ch);
+        //ctx.stroke();
+        ctx.fill();
+
+        // - second
+        ctx.beginPath();
+        ctx.strokeStyle = colors[1];
+        ctx.fillStyle = colors[1];
+        ctx.moveTo(0, ch);
+
+        phi = frames / 36;
+
+        for (var x = 0; x < w; x++) {
+          //y = Math.sin(x * frequency + phi) * amplitude / 2 + amplitude / 2;
+          y = Math.cos(x * frequency + phi) * amplitude2 / 2 + amplitude2 / 4;
+          ctx.lineTo(x, y + 40); // 40 = offset
+        }
+        
+        ctx.lineTo(w, ch);
+        ctx.lineTo(0, ch);
+        //ctx.stroke();
+        ctx.fill();
+
+        // - one
+        ctx.beginPath();
+        ctx.strokeStyle = colors[1];
+        ctx.fillStyle = colors[1];
+        ctx.moveTo(0, ch);
+        
+        function getRandomInt(max) {
+          return Math.floor(Math.random() * Math.floor(max));
+        }
+
+        var possible = [1.1, 1, 0.9];
+       
+        phi = frames / 24;
+
+        for (var x = 0; x < w; x++) {
+          y = Math.sin(x * frequency + phi) * amplitude / 8 + amplitude / 2;
+          //y = Math.cos(x * frequency + phi) * amplitude / 8 + amplitude / 2;
+          ctx.lineTo(x, y + 40); // 40 = offset
+        }
+
+        ctx.lineTo(w, ch);
+        ctx.lineTo(0, ch);
+        //ctx.stroke();
+        ctx.fill();
+
+        // - oneb
+        ctx.beginPath();
+        ctx.strokeStyle = colors[1];
+        ctx.fillStyle = colors[1];
+        ctx.moveTo(0, ch);
+        
+        function getRandomInt(max) {
+          return Math.floor(Math.random() * Math.floor(max));
+        }
+
+        var possible = [1.1, 1, 0.9];
+       
+        phi = frames / 48;
+
+        for (var x = 0; x < w; x++) {
+          y = Math.sin(x * frequency + phi) * amplitude / 10 + amplitude / 2;
+          //y = Math.cos(x * frequency + phi) * amplitude / 10 + amplitude / 2;
+          ctx.lineTo(x, y + 100); // 40 = offset
+        }
+
+        ctx.lineTo(w, ch);
+        ctx.lineTo(0, ch);
+        //ctx.stroke();
+        ctx.fill();
+        
+        requestId = window.requestAnimationFrame(Draw);
+      }
+      requestId = window.requestAnimationFrame(Draw);
 
 
 

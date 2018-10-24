@@ -329,14 +329,33 @@ html.fp-enabled,
 .u-large-font {
   font-size: 42px; }
 
+.u-xlarge-font {
+  font-size: 60px; }
+
+.u-pt-0 {
+  padding-top: 0; }
+
 #fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span,
-#fp-nav ul li a span, .fp-slidesNav ul li a span {
+#fp-nav ul li a span, .fp-slidesNav ul li a span,
+#fp-nav ul li:hover a span, .fp-slidesNav ul li:hover a span {
+  background-color: #fff;
   border-radius: 0;
-  background-color: #fff; }
+  height: 1px;
+  width: 18px;
+  margin: 0;
+  left: 0;
+  top: 0; }
 
 #fp-nav {
   opacity: 0;
-  animation: fadeIn 0.6s 1.75s forwards; }
+  animation: fadeIn 0.6s 3.75s forwards; }
+
+#fp-nav.right {
+  right: 2rem; }
+
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span,
+#fp-nav ul li:hover a span, .fp-slidesNav ul li:hover a span {
+  height: 3px; }
 
 body {
   font-family: "Circular Std Book";
@@ -371,26 +390,34 @@ body {
   letter-spacing: 0;
   text-decoration: none;
   opacity: 0;
-  animation: fadein .6s 1.25s forwards; }
+  animation: fadein .6s 3.25s forwards; }
   .Logo:hover {
     text-decoration: none;
     cursor: pointer; }
   .Logo:link, .Logo:visited, .Logo:hover, .Logo:active {
     color: #fff; }
   .Logo-item {
-    padding-right: 0.5rem; }
+    padding-right: 0.5rem;
+    height: 30px; }
 
 .NavLink {
   color: #fff;
   display: inline-block;
-  font-size: 20px;
+  font-size: 24px;
   text-decoration: none;
   margin-left: 3rem; }
+  .fp-viewing-4 .NavLink {
+    color: #111; }
   .NavLink:hover {
     cursor: pointer; }
   .NavLink:link, .NavLink:visited, .NavLink:hover, .NavLink:active {
     text-decoration: none;
     color: #fff; }
+  .fp-viewing-4 .NavLink:link,
+  .fp-viewing-4 .NavLink:visited,
+  .fp-viewing-4 .NavLink:hover,
+  .fp-viewing-4 .NavLink:active {
+    color: #111; }
   .NavLink-holder {
     z-index: 2;
     position: relative; }
@@ -400,13 +427,12 @@ body {
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
     position: relative;
-    top: -0.6rem;
+    top: 0.1rem;
     z-index: 1;
-    width: 104%;
-    left: -2%;
+    width: 100%;
     background: #cc0303;
     background: linear-gradient(to bottom left, #ff7bac 0%, #cc0303 100%);
-    height: 8px; }
+    height: 2px; }
   .NavLink:hover:after,
   .fp-viewing-2 .NavLink[href="#2"]:after,
   .fp-viewing-3 .NavLink[href="#3"]:after,
@@ -433,7 +459,7 @@ body {
   z-index: 2;
   opacity: 0;
   transition: opacity 0.6s ease;
-  animation: fadeIn 0.6s 2s forwards; }
+  animation: fadeIn 0.6s 4s forwards; }
   .MouseIcon-content {
     fill: #fff;
     width: 40px;
@@ -458,13 +484,25 @@ body {
 
 .SlideCount {
   position: fixed;
-  left: 2rem;
-  bottom: 2rem;
+  left: 4rem;
+  bottom: 2.75rem;
   color: #fff;
-  font-size: 18px;
+  font-size: 21px;
   z-index: 2;
   opacity: 0;
-  animation: fadein .6s 2.25s forwards; }
+  animation: fadein .6s 4.25s forwards; }
+  .fp-viewing-4 .SlideCount {
+    color: #111; }
+
+.SineWaves {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1); }
 
 .NavigationBar {
   display: flex;
@@ -472,22 +510,22 @@ body {
   align-items: center;
   padding-bottom: 2.5rem;
   position: fixed;
-  width: calc(100% - 4rem);
-  top: 2rem;
+  width: calc(100% - 8rem);
+  top: 4rem;
   left: 2rem;
   z-index: 1;
   transition: border-bottom-color 0.2s ease; }
   .NavigationBar-content {
     opacity: 0;
-    -webkit-animation: fadein .6s 1.5s forwards;
+    -webkit-animation: fadein .6s 3.5s forwards;
     /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein .6s 1.5s forwards;
+    -moz-animation: fadein .6s 3.5s forwards;
     /* Firefox < 16 */
-    -ms-animation: fadein .6s 1.5s forwards;
+    -ms-animation: fadein .6s 3.5s forwards;
     /* Internet Explorer */
-    -o-animation: fadein .6s 1.5s forwards;
+    -o-animation: fadein .6s 3.5s forwards;
     /* Opera < 12.1 */
-    animation: fadein .6s 1.5s forwards; }
+    animation: fadein .6s 3.5s forwards; }
 
 .Footer {
   background: #111;
@@ -503,9 +541,13 @@ body {
 
 .Slide {
   text-align: center; }
-  .Slide-intro {
+  .Slide-intro p:first-child {
     opacity: 0;
     animation: fadeIn 0.6s 0.25s forwards; }
+  .Slide-intro p:nth-child(2),
+  .Slide-intro p:nth-child(3) {
+    opacity: 0;
+    animation: fadeIn 0.6s 1.75s forwards; }
 
 .Slide--home {
   text-align: center;
@@ -538,5 +580,5 @@ body {
   background: linear-gradient(to bottom left, #1503af 0%, #1b1464 100%); }
 
 .Slide[data-anchor="4"] {
-  background: #21004c;
-  background: linear-gradient(to bottom left, #4601a5 0%, #21004c 100%); }
+  background: #fff;
+  color: #111; }
